@@ -4,7 +4,8 @@
   "description": "A real time chat App",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node server/app"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,13 @@
   },
   "homepage": "https://github.com/tundewritescode/maxchat#readme",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
     "express": "^4.16.2",
+    "express-validator": "^4.3.0",
     "mongoose": "^5.0.0-rc2"
   },
   "devDependencies": {
