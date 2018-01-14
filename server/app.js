@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import expressValidator from 'express-validator';
 
 import userRoutes from '../server/routes/userRoutes';
+import chatRoutes from '../server/routes/chatRoutes';
 
 import './config/db-config';
 
@@ -11,7 +12,9 @@ app.use(bodyParser.json());
 app.use(expressValidator());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
 userRoutes('/api/v1', app);
+chatRoutes('/api/v1', app);
 
 app.get('/', (req, res) => {
   res.status(200).json({
